@@ -15,3 +15,35 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+/* inherits values from root */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: inline-block;
+}
+/* inline-block lets items sit in the same line while retaining block property use such as margin */
+
+nav > ul {
+  list-style: none;
+  display: flex;
+}
+/* targets ul elements within the nav only */
+/* list-style: none removed bullets from the ul list items */
+/* flex default is horizontal/row */
+
+nav > ul li {
+  /* margin-right: 36px; */
+  /* margin: 0 36 0; */
+  margin-inline-end: 36px;
+}
+/* margin-inline-end takes into account the directionality of different languages */
+
+/* margin shorthand */
+/* if 4 values: top right bottom left */
+/* if 3 values: top/bottom right left */
+/* single value applies to all sides */
