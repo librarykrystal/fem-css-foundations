@@ -18,13 +18,28 @@ a {
 /* inherits values from root */
 
 header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr 34px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo nav shopping-cart";
+  /* grid-column-gap: 0px;
+  grid-row-gap: 0px; */
   align-items: center;
-  justify-content: space-between;
+  padding: 0 60px;
+}
+
+header > a {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+header img {
+  grid-area: shopping-cart;
 }
 
 nav {
   display: inline-block;
+  justify-self: end;
 }
 /* inline-block lets items sit in the same line while retaining block property use such as margin */
 
@@ -40,6 +55,7 @@ nav > ul li {
   /* margin-right: 36px; */
   /* margin: 0 36 0; */
   margin-inline-end: 36px;
+  font-size: 20px;
 }
 /* margin-inline-end takes into account the directionality of different languages */
 
