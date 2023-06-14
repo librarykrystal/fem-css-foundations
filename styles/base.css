@@ -17,7 +17,7 @@ a {
 }
 /* inherits values from root */
 
-header {
+.header {
   display: grid;
   grid-template-columns: 1fr 3fr 34px;
   grid-template-rows: 1fr;
@@ -33,30 +33,33 @@ header > a {
   font-weight: bold;
 }
 
-header img {
+/* header img {
   grid-area: shopping-cart;
-}
+} */
+/* this was an example to make the shopping cart icon assign to its area, but is not needed here */
 
-nav {
+.nav {
   display: inline-block;
   justify-self: end;
 }
 /* inline-block lets items sit in the same line while retaining block property use such as margin */
 
-nav > ul {
+.nav__list {
   list-style: none;
   display: flex;
 }
+/* formerly targeted "nav > ul" before adding class in HTML */
 /* targets ul elements within the nav only */
 /* list-style: none removed bullets from the ul list items */
 /* flex default is horizontal/row */
 
-nav > ul li {
+.nav__list-item {
   /* margin-right: 36px; */
   /* margin: 0 36 0; */
   margin-inline-end: 36px;
   font-size: 20px;
 }
+/* formerly targeted "nav > ul li" before adding class in HTML */
 /* margin-inline-end takes into account the directionality of different languages */
 
 /* margin shorthand */
